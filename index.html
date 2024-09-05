@@ -1,0 +1,853 @@
+<html>
+  <head>
+ <title>loki</title>
+  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+  <title >new</title>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+        crossorigin="anonymous"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+      />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+      <link
+        href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+        rel="stylesheet"
+      />  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <body>
+      
+<!-- header -->
+      
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.jpeg" alt="Logo" style="width:80px;" class="rounded-pill">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">Episode</a>
+        </li>
+        <li class="nav-item">
+          
+  <div class="dropdown ">
+    <button type="button" class="btn btn-dark dropdown-toggle bg-dark-green" data-bs-toggle="dropdown">
+      seasons
+    </button>
+    <ul class="dropdown-menu bg-dark-green">
+      <li><a class="dropdown-item" href="#">season 1</a></li>
+      <li><a class="dropdown-item" href="#">season 2</a></li>
+     
+    </ul>
+  </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">characters</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">vallins</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-primary" type="button">Search</button>
+      </form>
+      <li class="nav-item">
+        <button id="showFormButton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">log in  </button>
+  
+  <!-- Modal for the form -->
+  <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="formModalLabel">Form</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <!-- Form content -->
+                  <form action="/action_page.php">
+                      <div class="mb-3 mt-3">
+                          <label for="email" class="form-label">Email:</label>
+                          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                      </div>
+                      <div class="mb-3">
+                          <label for="pwd" class="form-label">Password:</label>
+                          <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                      </div>
+                      <div class="form-check mb-3">
+                          <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                          </label>
+                      </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  
+  <!-- Include Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        </li>
+          <!-- Modal for the form -->
+
+    </div>
+  </div>
+</nav>
+<!-- header -->
+
+
+ <!-- sider pics -->
+         
+          <!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/3.jpg" alt="Los Angeles" class="d-block" style="width:100%" >
+      <div class="carousel-caption">
+        <h3>Berona </h3>
+        <p>The old queen , goes to be the new king!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/1.jpg" alt="Chicago" class="d-block" style="width:100%">
+      <div class="carousel-caption">
+        <h3>Loki </h3>
+        <p>the new ,how remiens</p>
+      </div> 
+    </div>
+    <div class="carousel-item">
+      <img src="images/2.jpg" alt="New York" class="d-block" style="width:100%">
+      <div class="carousel-caption">
+        <h3>Silfy </h3>
+        <p>the one ,that waited for the chance</p>
+      </div>  
+    </div>
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+<!-- sider pics -->
+
+
+
+<!-- icons -->
+
+<aside>
+  <div class="container-fluid  p-0" style="position: relative;">
+      <div class="d-flex flex-column justify-content-between ms-auto"
+          style="position: fixed; z-index: 990; top: 250px; right: 30px;">
+          <div class="aside-icon"><a href="#"><i class="fab fa-facebook-square "></i></a></div>
+          <div class="aside-icon"><a href="#"><i class="fab fa-whatsapp-square"></i></a></div>
+          <div class="aside-icon"><a href="#"><i class="fab fa-twitter-square"></i></a></div>
+          <div class="aside-icon"><a href="#"><i class="fab fa-linkedin"></i></a></div>
+          <div class="aside-icon"><a href="#"><i class="fab fa-instagram-square"></i></a></div>
+      </div>
+  </div>
+</aside>
+
+<!-- Include Bootstrap 5 JS (optional if using any JavaScript features) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<br>
+<!-- icons -->
+
+               
+
+
+<!-- information -->
+
+<div class="container-fluid ">
+  <div class="container-fluid rounded bg-dark-green" style="height: 300px;">
+
+    <h2 style=" text-shadow: 1px 1px  10px rgb(255, 255, 255);">The hadden truth behind the betrytes :</h2><br>
+    <p>the fear of being lonely , and left alone . beleiving you do not deserve that make you do anything to avoided</p>
+    <button type="button" class="btn btn-outline-light">learn more</button>
+
+</div>
+</div>
+
+<br><br>
+<!-- information -->
+ 
+<!-- information -2-->
+ <!-- Centered Header -->
+ <div class="container-fluid">
+  <div class="container-fluid rounded text-center d-flex justify-content-center align-items-center centered-div bg-dark-green">
+      <h1 class="text-center">loki's versions</h1>
+  </div>
+</div>
+<!-- Centered Header -->
+<div class="container-fluid ">
+
+<div id="accordion">
+  <div class="card bg-dark text-light"> <!-- Added bg-white and text-dark -->
+    <div class="card-header">
+      <a class="btn text-light" data-bs-toggle="collapse" href="#collapseOne">
+        female loki
+      </a>
+    </div>
+    <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+      <div class="card-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+    </div>
+  </div>
+  <div class="card bg-dark text-light"> <!-- Added bg-white and text-dark -->
+    <div class="card-header">
+      <a class="collapsed btn text-light" data-bs-toggle="collapse" href="#collapseTwo">
+       kid loki
+      </a>
+    </div>
+    <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+      <div class="card-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+    </div>
+  </div>
+  <div class="card bg-dark text-light"> <!-- Added bg-white and text-dark -->
+    <div class="card-header">
+      <a class="collapsed btn text-light" data-bs-toggle="collapse" href="#collapseThree">
+        old loki
+      </a>
+    </div>
+    <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+      <div class="card-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<br>
+<!-- information -2-->
+
+
+
+<!-- comments ................................................................................................................................................................................................................................................................................. -->
+
+<!-- Comment Section 1 -->
+
+ <!-- Centered Header -->
+ <div class="container-fluid">
+  <div class="container-fluid rounded text-center d-flex justify-content-center align-items-center centered-div bg-dark-green">
+      <h1 class="text-center">searching for loki , or comments</h1>
+  </div>
+<!-- Centered Header -->
+
+<div class="container-fluid my-4 bg-dark-green">
+  <h2 class="mb-4">Leave a Comment </h2>
+  <div class="mb-3">
+    <textarea class="form-control" id="commentInput1" rows="4" placeholder="Write your comment here..."></textarea>
+  </div>
+  <button class="btn my-4 btn-primary" id="submitComment1">search</button>
+  <div class="mt-4" id="commentsSection1">
+    <!-- Comments will appear here -->
+  </div>
+</div>
+</div>
+
+
+<!-- Comment Section 2 -->
+
+  <!-- Centered Header -->
+  <div class="container-fluid">
+    <div class="container-fluid rounded text-center d-flex justify-content-center align-items-center centered-div  bg-dark-green">
+        <h1 class="text-center">searching for loki , or comments</h1>
+    </div>
+  <!-- Centered Header -->
+
+<div class="container-fluid my-4 bg-dark-green">
+  <h2 class="mb-4">Leave a Comment</h2>
+  <div class="mb-3">
+    <textarea class="form-control" id="commentInput2" rows="4" placeholder="Write your comment here..."></textarea>
+  </div>
+  <button class="btn  my-4 btn-primary" id="submitComment2">search</button>
+  <div class="mt-4" id="commentsSection2">
+    <!-- Comments will appear here -->
+  </div>
+</div>
+</div>
+
+
+<!-- Comment Section 3 -->
+
+ <!-- Centered Header -->
+ <div class="container-fluid">
+  <div class="container-fluid rounded text-center d-flex justify-content-center align-items-center centered-div  bg-dark-green">
+      <h1 class="text-center">searching for loki , or comments</h1>
+  </div>
+<!-- Centered Header -->
+
+
+<div class="container-fluid my-4 bg-dark-green">
+  <h2 class="mb-4">Leave a Comment </h2>
+  <div class="mb-3">
+    <textarea class="form-control" id="commentInput3" rows="4" placeholder="Write your comment here..."></textarea>
+  </div>
+  <button class="btn btn-primary my-4" id="submitComment3">search</button>
+  <div class="mt-4" id="commentsSection3">
+    <!-- Comments will appear here -->
+  </div>
+</div>
+</div>
+
+<!-- Include Bootstrap 5 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Separate JavaScript Code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to handle comment submission
+    function setupCommentSection(commentInputId, submitButtonId, commentsSectionId) {
+      document.getElementById(submitButtonId).addEventListener('click', function() {
+        var commentInput = document.getElementById(commentInputId);
+        var commentsSection = document.getElementById(commentsSectionId);
+        var commentText = commentInput.value.trim();
+
+        // Check if the comment is not empty
+        if (commentText) {
+          alert('تم نسخ النص');
+
+       
+        } else {
+          alert('Please enter a comment before submitting.');
+        }
+      });
+    }
+
+    // Setup all three comment sections
+    setupCommentSection('commentInput1', 'submitComment1', 'commentsSection1');
+    setupCommentSection('commentInput2', 'submitComment2', 'commentsSection2');
+    setupCommentSection('commentInput3', 'submitComment3', 'commentsSection3');
+  });
+</script>
+
+<!-- comment section -->
+
+
+<!-- comments ................................................................................................................................................................................................................................................................................. -->
+
+
+<!-- background image  -->
+<section>
+  <div class="fixed-image1">
+    <!-- You can add content here if needed -->
+  </div>
+</section>
+
+<!-- background image .............................................................................. -->
+
+<!-- cards section .......................................................................................... -->
+
+<!-- Centered Header -->
+<div class="container-fluid">
+  <div class="rounded text-center d-flex justify-content-center align-items-center centered-div bg-dark-green">
+    <h1 class="text-center">loki's covers</h1>
+  </div>
+  <br>
+  <div class="row justify-content-around pb-5">
+    <!-- Card 1 -->
+    <div class="card bg-dark text-light m-3 shadow overlay-card bg-dark-green" style="width: 350px;">
+      <img class="card-img-top mx-auto d-block" src="./images/c1.jpg" alt="Card image" style="width: 90%;">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer.</p>
+        <a href="#" class="btn btn-success">See Profile</a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card bg-dark text-light m-3 shadow overlay-card bg-dark-green" style="width: 350px;">
+      <img class="card-img-top mx-auto d-block" src="./images/c2.jpg" alt="Card image" style="width: 90%;">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer.</p>
+        <a href="#" class="btn btn-success">See Profile</a>
+      </div>
+    </div>
+
+
+    <!-- Card 3 -->
+    <div class="card bg-dark text-light m-3 shadow overlay-card" style="width: 350px;">
+      <img class="card-img-top mx-auto d-block" src="./images/c1.jpg" alt="Card image" style="width: 90%;">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer.</p>
+        <a href="#" class="btn btn-success">See Profile</a>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card bg-dark text-light m-3 shadow overlay-card" style="width: 350px;">
+      <img class="card-img-top mx-auto d-block" src="./images/c2.jpg" alt="Card image" style="width: 90%;">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer.</p>
+        <a href="#" class="btn btn-success">See Profile</a>
+      </div>
+    </div>
+
+
+    <!-- Card 5 -->
+    <div class="card bg-dark text-light m-3 shadow overlay-card" style="width: 350px;">
+      <img class="card-img-top mx-auto d-block" src="./images/c1.jpg" alt="Card image" style="width: 90%;">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer.</p>
+        <a href="#" class="btn btn-success">See Profile</a>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card bg-dark text-light m-3 shadow overlay-card" style="width: 350px;">
+      <img class="card-img-top mx-auto d-block" src="./images/c2.jpg" alt="Card image" style="width: 90%;">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer.</p>
+        <a href="#" class="btn btn-success">See Profile</a>
+      </div>
+    </div>
+
+
+
+    <!-- Card 7 -->
+    <div class="card bg-dark text-light m-3 shadow overlay-card" style="width: 350px;">
+      <img class="card-img-top mx-auto d-block" src="./images/c1.jpg" alt="Card image" style="width: 90%;">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer.</p>
+        <a href="#" class="btn btn-success">See Profile</a>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card bg-dark text-light m-3 shadow overlay-card" style="width: 350px;">
+      <img class="card-img-top mx-auto d-block" src="./images/c2.jpg" alt="Card image" style="width: 90%;">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer.</p>
+        <a href="#" class="btn btn-success">See Profile</a>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+<!-- cards section.................................................................................................... -->
+
+
+<!-- background image  -->
+<section>
+  <div class="fixed-image">
+    <!-- You can add content here if needed -->
+  </div>
+</section>
+
+<!-- background image .............................................................................. -->
+
+
+<!-- hoverd cards------------------------------------------------------------------- -->
+<!-- Centered Header -->
+<div class="container-fluid">
+  <div class="container-fluid rounded text-center d-flex justify-content-center align-items-center centered-div bg-dark-green">
+      <h1 class="text-center">loki's characters</h1>
+  </div>
+   <br><br>
+
+<!-- Centered Header -->
+<!-- hoverd cards------------------------------------------------------------------- -->
+<div class="row justify-content-around pb-5">
+
+
+<div class="card-2 img-fluid position-relative shadow rounded  m-3" style="width:370px">
+  <img class="card-img-top" src="./images/loki.jpg" alt="Card image">
+  <div class="card-img-overlay">
+    <h4 class="card-title text-warning strong text-center"> Loki</h4>
+    <p class="card-text  text-warning"> <i class="fa-solid fa-clock"></i> August 15, 2024.</p>
+        <img class="rounded-circle position-absolute bottom-0 end-100% im shadow "  src="./images/loki.jpg" alt="Cinque Terre" width="30%" height="40%">
+
+  </div>
+</div>
+
+
+
+<div class="card-2 img-fluid position-relative shadow rounded m-3" style="width:370px">
+  <img class="card-img-top" src="./images/old.jpg" alt="Card image">
+  <div class="card-img-overlay">
+    <h4 class="card-title text-warning strong text-center"> Old loki</h4>
+    <p class="card-text  text-warning"> <i class="fa-solid fa-clock"></i> August 15, 2024.</p>
+        <img class="rounded-circle position-absolute bottom-0 end-100% im shadow "  src="./images/old.jpg" alt="Cinque Terre" width="30%" height="40%">
+
+  </div>
+</div>
+
+
+
+<div class="card-2 img-fluid position-relative shadow rounded m-3" style="width:370px">
+  <img class="card-img-top" src="./images/ob.jpg" alt="Card image" >
+  <div class="card-img-overlay position-absolute top 100% left-10% ">
+    <h4 class="card-title text-warning strong text-center">Ob</h4>
+    <p class="card-text  text-warning"> <i class="fa-solid fa-clock"></i> August 15, 2024.</p>
+        <img class="rounded-circle position-absolute bottom-0 end-100% im shadow"  src="./images/ob.jpg" alt="Cinque Terre" width="30%" height="40%">
+
+  </div>
+</div>
+
+
+
+</div>
+</div>
+
+<!-- hovered cards ............................................................................................................................................... -->
+  <!-- Centered Header -->
+  <div class="container-fluid">
+
+  <div class="container-fluid rounded text-center d-flex justify-content-center align-items-center centered-div  text-uppercase mb-4 bg-dark-green">
+      <h1 class="text-center">Spceial Episodes</h1>
+  </div>
+   <br><br>
+   
+
+    <!-- <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="podcast-card d-flex">
+          <div class="card-body">
+            <h5 class="card-title">Podcast Title</h5>
+            <p class="text-muted"><i class="fas fa-calendar-alt"></i> Mon, May 25th 2020</p>
+            <hr>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero.</p>
+            <div>
+              <button class="btn btn-outline-dark"><i class="fas fa-podcast"></i> Podcast</button>
+              <button class="btn btn-outline-dark"><i class="fas fa-clock"></i> 55 mins.</button>
+              <button class="btn btn-outline-info"><i class="fas fa-play"></i> Play Episode</button>
+            </div>
+          </div>
+          <img src="images/image.jpg" alt="Podcast Image">
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+  <section>
+    
+
+    <div class="container">
+
+      <div class="card mb-5">
+        <div class="row g-0">       
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title">Ob's office</h2>
+              <p class="card-text"><i class="fa-regular fa-calendar-days"></i> mon , may 20th 2023</p>
+              <p class="card-text card-line"></p>
+              <p class="card-text marg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem nisi possimus sit iste ut debitis? Officiis quod perferendis ipsum, fugit voluptatem est sequi aut fuga porro sint deleniti nemo. Dignissimos soluta, quae sequi iste velit eveniet qui nemo porro eaque numquam quod praesentium deleniti maxime non architecto explicabo, commodi, dolore temporibus hic dolor est quia rem voluptates? Excepturi assumenda tenetur architecto at expedita nostrum illum.</p>
+              <ul class="card-list list-unstyled">
+                <li class="d-inline-block bg-secondary rounded px-2 p-1 text-light"><i class="fa-solid fa-tag"></i> Summary</li>
+                <li class="d-inline-block mx-1 bg-secondary rounded p-1 px-2 text-light"><i class="fa-solid fa-clock"></i> 10 mins</li>
+                <li class="d-inline-block bg-secondary rounded p-1 px-2 text-light"><i class="fa-solid fa-play"></i> Play Video</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="images/logo.jpg" class="img-fluid rounded-end img-r h-100 w-100" alt="...">
+          </div>
+        </div>
+      </div>
+
+
+      
+      <div class="card mb-5">
+        <div class="row g-0">       
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title">There is no solution</h2>
+              <p class="card-text"><i class="fa-regular fa-calendar-days"></i> mon , may 20th 2023</p>
+              <p class="card-text card-line"></p>
+              <p class="card-text marg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem nisi possimus sit iste ut debitis? Officiis quod perferendis ipsum, fugit voluptatem est sequi aut fuga porro sint deleniti nemo. Dignissimos soluta, quae sequi iste velit eveniet qui nemo porro eaque numquam quod praesentium deleniti maxime non architecto explicabo, commodi, dolore temporibus hic dolor est quia rem voluptates? Excepturi assumenda tenetur architecto at expedita nostrum illum.</p>
+              <ul class="card-list list-unstyled">
+                <li class="d-inline-block bg-secondary rounded px-2 p-1 text-light"><i class="fa-solid fa-tag"></i> Summary</li>
+                <li class="d-inline-block mx-1 bg-secondary rounded p-1 px-2 text-light"><i class="fa-solid fa-clock"></i> 10 mins</li>
+                <li class="d-inline-block bg-secondary rounded p-1 px-2 text-light"><i class="fa-solid fa-play"></i> Play Video</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="images/11.jpg" class="img-fluid rounded-end img-r h-100 w-100" alt="...">
+          </div>
+        </div>
+      </div>
+
+     
+
+      <div class="card mb-5">
+        <div class="row g-0">       
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title">Discover the truth</h2>
+              <p class="card-text"><i class="fa-regular fa-calendar-days"></i> mon , may 20th 2023</p>
+              <p class="card-text card-line"></p>
+              <p class="card-text marg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem nisi possimus sit iste ut debitis? Officiis quod perferendis ipsum, fugit voluptatem est sequi aut fuga porro sint deleniti nemo. Dignissimos soluta, quae sequi iste velit eveniet qui nemo porro eaque numquam quod praesentium deleniti maxime non architecto explicabo, commodi, dolore temporibus hic dolor est quia rem voluptates? Excepturi assumenda tenetur architecto at expedita nostrum illum.</p>
+              <ul class="card-list list-unstyled">
+                <li class="d-inline-block bg-secondary rounded px-2 p-1 text-light"><i class="fa-solid fa-tag"></i> Summary</li>
+                <li class="d-inline-block mx-1 bg-secondary rounded p-1 px-2 text-light"><i class="fa-solid fa-clock"></i> 10 mins</li>
+                <li class="d-inline-block bg-secondary rounded p-1 px-2 text-light"><i class="fa-solid fa-play"></i> Play Video</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="images/8.jpg" class="img-fluid rounded-end img-r h-100 w-100" alt="...">
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="card mb-5">
+        <div class="row g-0">       
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title">Free to choose</h2>
+              <p class="card-text"><i class="fa-regular fa-calendar-days"></i> mon , may 20th 2023</p>
+              <p class="card-text card-line"></p>
+              <p class="card-text marg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem nisi possimus sit iste ut debitis? Officiis quod perferendis ipsum, fugit voluptatem est sequi aut fuga porro sint deleniti nemo. Dignissimos soluta, quae sequi iste velit eveniet qui nemo porro eaque numquam quod praesentium deleniti maxime non architecto explicabo, commodi, dolore temporibus hic dolor est quia rem voluptates? Excepturi assumenda tenetur architecto at expedita nostrum illum.</p>
+              <ul class="card-list list-unstyled">
+                <li class="d-inline-block bg-secondary rounded px-2 p-1 text-light"><i class="fa-solid fa-tag"></i> Summary</li>
+                <li class="d-inline-block mx-1 bg-secondary rounded p-1 px-2 text-light"><i class="fa-solid fa-clock"></i> 10 mins</li>
+                <li class="d-inline-block bg-secondary rounded p-1 px-2 text-light"><i class="fa-solid fa-play"></i> Play Video</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="images/9.jpg" class="img-fluid rounded-end img-r h-100 w-100" alt="...">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </div>
+
+  <!-- <div class="container-fluid">
+  
+  <footer>
+    <div class="p-4 text-center text-uppercase mb-4">
+      <h2>Join Us</h2>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+
+        <div class="join col-12 col-sm-6 col-md-6 col-lg-2 text-center bg-light rounded px-5 py-2 mx-3 my-4">
+          <p class="text-capitalize fs-3">watch vedios</p>
+          <img src="image/ig-Image.jpg" alt="" class=" mb-2 w-75 join-img">
+          <p class="text-capitalize fs-4">go to link</p>
+        </div>
+
+        <div class="join col-12 col-sm-6 col-md-6 col-lg-2 text-center bg-light rounded px-5 py-2 mx-3 my-4">
+          <p class="text-capitalize fs-3">follow</p>
+          <img src="image/WhatsApp-Image.jpg" alt="" class=" mb-2 w-75 join-img">
+          <p class="text-capitalize fs-4">go to link</p>
+        </div>
+
+        <div class="join col-12 col-sm-6 col-md-6 col-lg-2 text-center bg-light rounded px-5 py-2 mx-3 my-4">
+          <p class="text-capitalize fs-3">subscribe now</p>
+          <img src="image/x-Image.jpg" alt="" class=" mb-2 w-75 join-img">
+          <p class="text-capitalize fs-4">go to link</p>
+        </div>
+
+        <div class="join col-12 col-sm-6 col-md-6 col-lg-2 text-center bg-light rounded px-5 py-2 mx-3 my-4">
+          <p class="text-capitalize fs-3">follow</p>
+          <img src="image/linked in-Image.jpg" alt="" class=" mb-2 w-75 join-img">
+          <p class="text-capitalize fs-4">go to link</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <br>
+  <br>
+
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4 bg-info py-3">
+          <div class="img-foot text-center border-3 border-bottom border-top py-3">
+            <img src="image/furniture-logo.jpg" alt="" class="border rounded-circle d-inline mx-2 foot-img" width="70" height="70">
+            <p class="text-capitalize d-inline fs-5 text-light">good company</p>
+          </div>
+
+          <div class="info-foot text-center mt-3 text-light">
+            <p>Phone : 011 2233 4455</p>
+            <p>Address : Giza - EGYPT</p>
+            <p>Tel : 120-240-000</p>
+          </div>  
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4 bg-info py-3">
+          <div class="img-foot text-center border-3 border-bottom border-top py-3">
+            <img src="image/furniture-logo.jpg" alt="" class="border rounded-circle d-inline mx-2 foot-img" width="70" height="70">
+            <p class="text-capitalize d-inline fs-5 text-light">important links</p>
+          </div>
+
+          <div class="info-foot text-center mt-3">
+            <p><a href="#">Visit Us</a></p>
+            <p><a href="#">Take alook</a></p>
+            <p><a href="#">Contact Us</a></p>
+          </div>  
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4 bg-info py-3">
+          <div class="img-foot text-center border-3 border-bottom border-top py-3">
+            <img src="image/furniture-logo.jpg" alt="" class="border rounded-circle d-inline mx-2 foot-img" width="70" height="70">
+            <p class="text-capitalize d-inline fs-5 text-light">vision</p>
+          </div>
+
+          <div class="info-foot text-center mt-3 text-light">
+            <p>Serveices for all</p>
+            <p>Provide best serveices</p>
+            <p>You will be comfortable than before</p>
+          </div>  
+        </div>
+
+        <div class="col-12 bg-info pt-3 img-foot text-center border-3 border-bottom border-top">
+          <p class="text-uppercase fs-5 text-light">copyright &copy; 2024 saif eldin mohamed. good company. all rights</p>  
+        </div>
+        <div class="bg-info p-5"></div>
+
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+  
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   -->
+
+   <div class="container">
+    <!-- Social Media Section -->
+    <div class="row text-center my-4 ">
+        <div class="col-md-3">
+            <div class="social-icon bg-dark-green">
+                <h5>Follow Us In</h5>
+                <i class="fab fa-twitter"></i> <!-- Twitter Icon -->
+                <p>Go To Link</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="social-icon bg-dark-green">
+                <h5>Follow Us In</h5>
+                <i class="fab fa-whatsapp"></i> <!-- WhatsApp Icon -->
+                <p>Go To Link</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="social-icon bg-dark-green">
+                <h5>Follow Us In</h5>
+                <i class="fab fa-linkedin"></i> <!-- LinkedIn Icon -->
+                <p>Go To Link</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="social-icon bg-dark-green">
+                <h5>Follow Us In</h5>
+                <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+                <p>Go To Link</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <div class="footer-section">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <h5>Store Information</h5>
+                  <ul class="list-unstyled">
+                      <li><i class="fas fa-map-marker-alt"></i> <a href="#" class="footer-link">end of good in marvel, us</a></li>
+                      <li><a href="#" class="footer-link">Centre United States</a></li>
+                      <li><i class="fas fa-phone"></i> <a href="010025810012" class="footer-link">010025810012</a></li>
+                      <li><i class="fas fa-envelope"></i> <a href="mailtoemaillestsgo@gmail.com" class="footer-link">emaillestsgo@gmail.com</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-4">
+                  <h5>Information</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#" class="footer-link">About Us</a></li>
+                      <li><a href="#" class="footer-link">Delivery Information</a></li>
+                      <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                      <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+                      <li><a href="#" class="footer-link">Site Map</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-4 text-center">
+                  <h5>Payment Methods</h5>
+                  <ul class="list-unstyled">
+                      <li><img src="images/paypal-icon.png" alt="PayPal" width="50"> <!-- Replace with your icon --></li>
+                      <br>
+                      <li><img src="images/visa-icon.png" alt="Visa" width="50"> <!-- Replace with your icon --></li>
+                      <br>
+                      <li><img src="images/mastercard-icon.png" alt="MasterCard" width="50"> <!-- Replace with your icon --></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

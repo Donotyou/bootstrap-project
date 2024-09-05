@@ -1,0 +1,275 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --maincolor:#b95885;
+  --subcolor:#d862a3;
+}
+/* style="position: relative;" */
+.aside-icon {
+  margin-bottom: 15px; /* Spacing between icons */
+  
+}
+
+.aside-icon a {
+  color: #f4ca11; /* Icon color */
+  font-size: 40px; /* Adjust icon size */
+  text-decoration: none;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+  
+
+}
+
+.aside-icon a:hover {
+  transform: scale(1.2); /* Grow effect on hover */
+  color: #08d55d; /* Change icon color on hover */
+}
+.centered-div {
+  height: 100px; 
+  background-color: black; 
+  color: #f4efef;
+}
+.fixed-image1 {
+  
+  
+    background-image:url(../images/6.jpg ) ;
+    height: 350px;
+    background-size: cover;
+    background-attachment: fixed;
+    /* position: relative; */
+    width: 100%;
+    background-position: center;
+  
+}
+.fixed-image {
+  
+  
+  background-image:url(../images/7.jpg ) ;
+  height: 350px;
+  background-size: cover;
+  background-attachment: fixed;
+  /* position: relative; */
+  width: 100%;
+  background-position: center;
+
+}
+/* CSS for hover effect on cards */
+.overlay-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-card::before,
+.overlay-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%; /* Each overlay will cover half the card width */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Darker overlay color */
+  z-index: 1; /* Ensure overlays are above card content */
+  transition: all 0.5s ease; /* Smooth transition for the effect */
+}
+
+.overlay-card::before {
+  left: -50%; /* Start from the left of the card */
+}
+
+.overlay-card::after {
+  right: -50%; /* Start from the right of the card */
+}
+
+.overlay-card:hover::before {
+  left: 0; /* Move into view from the left */
+}
+
+.overlay-card:hover::after {
+  right: 0; /* Move into view from the right */
+}
+
+/* Ensure text and other content is above the overlay */
+/* .overlay-card .card-body,
+.overlay-card img {
+  position: relative;
+  z-index: 2; /* Keep card content above the overlay */
+/* } */ 
+
+.card-2 .card-img-top {
+  overflow: hidden;
+  transition: all 0.3s ease;
+  filter: grayscale(100%); /* Grayscale effect */
+  
+
+}
+.card-2{
+  transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+
+}
+
+
+.card-2:hover  {
+  transform: scale(0.95); /* Zoom out effect */
+  filter: grayscale(0%); /* Grayscale effect */
+  transform: translateY(10px); /* Move the text up by 10 pixels on hover */
+
+}
+.card-2:hover .card-img-top {
+  transform: scale(0.90); /* Zoom out effect */
+  filter: grayscale(0%); /* Grayscale effect */
+}
+
+.card-2-img-overlay {
+  z-index: 1; /* Ensure text is on top */
+}
+
+.rounded-circle {
+  z-index: 2; /* Ensure the image is on top */
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+
+.card-2 h4,
+.card-2 p {
+  transition: transform 0.3s ease; /* Smooth transition for the text */
+}
+
+.card-2:hover h4,
+.card-2:hover p {
+  transform: translateX(-10px); /* Move the text right by 10 pixels on hover */
+}
+
+.podcast-card {
+  background-color: #1c5306c0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.podcast-card img {
+  width: 100%;
+  height: auto;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  clip-path: polygon(40% 0, 100% 0, 100% 100%, 20% 100%);
+
+}
+
+.podcast-card .card-body {
+  padding: 20px;
+}
+
+.podcast-card .card-title {
+  font-weight: bold;
+  color: #075c0d; /* Customize your color */
+}
+
+.podcast-card .card-text {
+  margin-bottom: 15px;
+}
+
+.podcast-card .btn {
+  margin-right: 10px;
+}
+
+
+.marg{
+  margin-bottom: 100px;
+}
+.card-list li:hover{
+  cursor: default;
+  background-color: rgb(75, 75, 75) !important;
+}
+.card-list li:last-child:hover{
+  cursor: pointer;
+  background-color: #1a6406 !important;
+}
+.card-line{
+  height: 3px;
+  width: 80px;
+  background-color: #255609;
+  border-radius: 5px;
+  margin-top: -10px;
+  transition: 0.5s;
+}
+.card:hover .card-line{
+  width: 160px;
+}
+@media (min-width: 768px ){
+  .img-l{
+      clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+  }
+  .img-r{
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 100%);
+  }
+}
+.img-l , .img-r{
+  transition: 0.5s;
+}
+.card:hover .img-l ,.card:hover .img-r{
+  transform: scale(1.007);
+}
+.join{
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 30px;
+  max-width: 60%;
+  min-width: 22%;
+}
+.join-img{
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;
+}
+.img-foot{
+  border-color: #82def0 !important;
+}
+.foot-img{
+  box-shadow: rgba(116, 58, 4, 0.5) 0px 0px 20px;
+}
+
+.social-icon {
+  background-color: #1b1b1b;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  margin: 10px;
+  border-radius: 5px;
+}
+.social-icon i {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #1d9bf0;
+}
+.footer-section {
+  background-color: #1b1b1b;
+  color: white;
+  padding: 20px 0;
+}
+.footer-section h5 {
+  font-weight: bold;
+}
+.footer-section .list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+    .footer-link {
+        color: white;
+        text-decoration: none;
+    }
+    .footer-link:hover {
+        text-decoration: underline;
+    }
+    .bg-dark-green {
+      background-color: #032503dc;
+      color: rgba(255, 244, 36, 0.884); /* Optional: Set text color to white */
+  }
+  
